@@ -7,8 +7,7 @@ export const DEFAULT_KEY_GENERATE_ALGORITHM = {
   name: "AES-CBC",
   length: 256,
 } as AesKeyGenParams | HmacKeyGenParams | Pbkdf2Params;
-
 export const DEFAULT_CRYPTOGRAPHY: algorithmType = {
   name: "AES-CBC",
-  iv: webCrypto.getRandomValues(new Uint8Array(16)),
+  iv: window.crypto.getRandomValues(new Uint8Array(16)),
 };

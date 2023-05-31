@@ -5,5 +5,4 @@ if (!WebCrypto) {
   console.warn("Web Crypto API not supported");
   throw new Error("Web Crypto API not supported");
 }
-
-export default WebCrypto as Crypto;
+export default WebCrypto as SubtleCrypto;
