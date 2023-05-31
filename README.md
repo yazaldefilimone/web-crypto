@@ -1,5 +1,3 @@
-# web-crypto
-
 web-crypto is a lightweight and dependency-free JavaScript library for cryptographic operations in web browsers. It provides a comprehensive set of functions and algorithms to securely handle cryptographic tasks, ensuring data confidentiality, integrity, and authentication.
 
 ## Features
