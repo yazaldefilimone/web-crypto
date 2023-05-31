@@ -12,21 +12,43 @@ web-crypto is a lightweight and dependency-free JavaScript library for cryptogra
 
 ## Installation
 
-You can include the web-crypto library in your project by downloading the minified version from the `dist` directory and including it in your HTML file:
-
-```html
-<script src="web-crypto.min.js"></script>
-```
-
-Alternatively, you can install web-crypto using package managers like npm or yarn:
+You can install web-crypto using package managers like npm or yarn:
 
 ```shell
-npm install web-crypto
+npm install web-crypto.js
 ```
 
 ## Getting Started
 
 To get started with web-crypto, simply include the library in your project and start using its cryptographic functions. Refer to the documentation and code examples provided to understand the available methods and their usage.
+
+```tsx
+import { useEffect } from "react";
+import webCrypto from "web-crypto.js";
+
+function App() {
+  useEffect(() => {
+    async function anyFn() {
+      const key = await webCrypto.generateKey();
+      const data = {
+        name: "Yazalde Filimone",
+        age: 18,
+      };
+      const coded = webCrypto.textEncode(JSON.stringify(data));
+      const data_encrypt = await webCrypto.encrypt({ key, data: coded });
+      const data_decrypt = await webCrypto.decrypt({ key, data: data_encrypt });
+      const decode = JSON.parse(webCrypto.textDecode(data_decrypt));
+      console.log({ decode });
+    }
+    anyFn()
+      .then()
+      .catch((erro) => console.log(erro));
+  }, []);
+  return <div />;
+}
+
+export default App;
+```
 
 ## Contribution
 
