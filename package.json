@@ -1,0 +1,32 @@
+{
+  "name": "web-crypto",
+  "version": "0.0.1",
+  "main": "index.js",
+  "description": "Lightweight web crypto lib. No dependencies. Cross-browser support.",
+  "repository": "git@github.com:yazaldefilimonepinto/web-crypto.git",
+  "author": "Yazalde Filimone <yazaldefilimon@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js)\" --write",
+    "postinstall": "husky install",
+    "dev": "",
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc -p tsconfig-build.json",
+    "prepare": "husky install",
+    "lint": "tslint -p tsconfig.json",
+    "test": "vitest run --passWithNoTests",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "typescript": "^5.0.4",
+    "@types/jest": "^29.4.1",
+    "@types/node": "^18.15.3",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "tsup": "^6.6.3",
+    "vite-tsconfig-paths": "^4.0.7",
+    "vitest": "^0.29.2"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,           
+    "skipLibCheck": true ,    
+    "target": "ESNext", 
+    "module": "ESNext",
+    "lib": ["dom", "ESNext"], 
+    "outDir": "dist", 
+    "strict": false, 
+    "esModuleInterop": true, 
+    "moduleResolution": "node",
+    "sourceMap": true 
+  },
+  "include": ["src"]
+                       
+}
