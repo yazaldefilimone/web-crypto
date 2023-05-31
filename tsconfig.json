@@ -5,11 +5,12 @@
     "target": "ESNext", 
     "module": "ESNext",
     "lib": ["dom", "ESNext"], 
-    "outDir": "dist", 
     "strict": false, 
     "esModuleInterop": true, 
     "moduleResolution": "node",
-    "sourceMap": true 
+    "sourceMap": true ,
+    "declaration": true,
+    "outDir": "./dist"
   },
   "include": ["src"]
                        
